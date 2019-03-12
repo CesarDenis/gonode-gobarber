@@ -4,7 +4,7 @@ module.exports = {
   username: 'docker',
   password: 'docker',
   database: 'gonode_gobarber',
-  defile: {
+  define: {
     timestamps: true,
     underscored: true,
     underscoredAll: true
