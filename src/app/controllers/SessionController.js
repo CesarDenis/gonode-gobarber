@@ -20,7 +20,9 @@ class SessionController {
       return res.redirect('/')
     }
 
-    return res.redirect('/dashboars')
+    req.session.user = user
+
+    return res.redirect('/app/dashboard')
   }
 }
 

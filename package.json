@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js -e js"
   },
   "husky": {
     "hooks": {
@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "connect-loki": "^1.1.0",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "multer": "^1.4.1",
     "nunjucks": "^3.2.0",
     "pg": "^7.8.2",
