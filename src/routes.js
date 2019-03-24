@@ -13,6 +13,8 @@ const FilesController = require('./app/controllers/FilesController')
 const SessionController = require('./app/controllers/SessionController')
 const UserController = require('./app/controllers/UserController')
 
+const AppointmentController = require('./app/controllers/AppointmentController')
+const AvailableController = require('./app/controllers/AvailableController')
 const DashboardController = require('./app/controllers/DashboardController')
 
 routes.use(flashMiddleware)
@@ -30,5 +32,9 @@ routes.use('/app', authMiddleware)
 routes.get('/app/logout', SessionController.destroy)
 
 routes.get('/app/dashboard', DashboardController.index)
+
+routes.get('/app/available/:provider', AvailableController.index)
+routes.get('/app/appointments/new/:provider', AppointmentController.create)
+routes.post('/app/appointments/new/:provider', AppointmentController.store)
 
 module.exports = routes
